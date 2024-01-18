@@ -29,23 +29,46 @@
     grid-area: 1 / 1 / 2 / 2;
 }
 
+#sidebar-wrapper {
+    display: grid;
+    grid-template-columns: 50px min-content;
+    grid-template-rows: repeat(10, 50px);
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
 #logo-container {
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-left: 20px;
     margin-top: 20px;
     column-gap: 10px;
 }
 
-#logo {
-    font-family: Madrigal;
-    color: var(--raisin-black);
-    text-align: center;
+#flower-logo-image {
+    height: 50px;
 }
 
-#flower-logo {
-    height: 50px;
+#logo-text {
+    font-family: Madrigal;
+    color: var(--lavender-blush);
+    text-align: center;
+    margin-left: 20px;
+    align-self: center;
+}
+
+.sidebar-icon {
+    height: 24px;
+    align-self: center;
+    justify-self: center;
+}
+
+.text {
+    font-family: Helvetica, sans-serif;
+    color: var(--lavender-blush);
+    margin-left: 20px;
+    align-self: center;
 }
 
 /* ----- Content ----- */
@@ -55,7 +78,6 @@ main {
     display: grid;
     grid-template-rows: 1fr 4fr;
 }
-
 
 #header-section {
     background-color: var(--lavender-blush);
