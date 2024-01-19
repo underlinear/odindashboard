@@ -64,7 +64,16 @@
 .sidebar-link-container li {
     display: grid;
     grid-template-columns: 50px min-content;
+    color: var(--lavender-blush);
+    transition: background-color 0.3s ease;
     list-style-type: none;
+}
+
+.sidebar-link-container li:hover {
+    filter: brightness(0) saturate(100%) 
+            invert(91%) sepia(10%) saturate(925%) 
+            hue-rotate(279deg) brightness(91%) contrast(90%);
+    /*     https://codepen.io/sosuke/pen/Pjoqqp CSS: Change black icon to any color */
 }
 
 .sidebar-icon {
@@ -75,15 +84,12 @@
 
 .text {
     font-family: Helvetica, sans-serif;
-    color: var(--lavender-blush);
     margin-left: 20px;
     align-self: center;
-    transition: color 0.3s ease;
     cursor: pointer;
 }
 
 .text:hover {
-    color: var(--thistle);
     text-decoration: underline;
 }
 
