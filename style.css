@@ -31,8 +31,8 @@
 
 #sidebar-wrapper {
     display: grid;
-    grid-template-columns: 50px min-content;
-    grid-template-rows: repeat(10, 50px);
+    grid-template-rows: 50px min-content min-content;
+    row-gap: 40px;
     margin-left: 10%;
     margin-top: 20px;
 }
@@ -41,9 +41,6 @@
     height: 50px;
     display: flex;
     align-items: center;
-    margin-left: 20px;
-    margin-top: 20px;
-    column-gap: 10px;
 }
 
 #flower-logo-image {
@@ -58,6 +55,18 @@
     align-self: center;
 }
 
+.sidebar-link-container {
+    display: grid;
+    grid-auto-rows: 50px;
+    align-items: center;
+}
+
+.sidebar-link-container li {
+    display: grid;
+    grid-template-columns: 50px min-content;
+    list-style-type: none;
+}
+
 .sidebar-icon {
     height: 24px;
     align-self: center;
@@ -69,6 +78,13 @@
     color: var(--lavender-blush);
     margin-left: 20px;
     align-self: center;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.text:hover {
+    color: var(--thistle);
+    text-decoration: underline;
 }
 
 /* ----- Content ----- */
@@ -84,6 +100,14 @@ main {
     display: grid;
     grid-area: 1 / 1 / 2 / 2; 
     grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+#search-bar {
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    height: 24px;
+
 }
 
 article {
