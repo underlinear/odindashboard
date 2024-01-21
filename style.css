@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Helvetica, sans-serif;
 }
 
 :root {
@@ -14,6 +15,11 @@
 @font-face {
     font-family: Madrigal;
     src: url("madrigal-font/Madrigal-mLJ92.ttf");
+}
+
+button {
+    background: none;
+    border: none;
 }
 
 #page-wrapper {
@@ -107,19 +113,16 @@ main {
     display: grid;
     grid-area: 1 / 1 / 2 / 2; 
     grid-template: 1fr 1fr / 6fr 4fr;
+    column-gap: 40px;
     align-items: center;
 }
+
+/* ----- Search bar ----- */
 
 #search-bar-container {
     display: grid;
     grid-template-columns: 1fr 8fr;
     align-items: center;
-}
-
-#search-bar-container button {
-    background: none;
-    border: none;
-
 }
 
 #search-bar-container button img {
@@ -143,6 +146,52 @@ main {
     color: var(--payne-gray);
 }
 
+/* ----- Notifications and User Panel ----- */
+
+#user-panel {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 4fr;
+}
+
+#user-panel button img {
+    height: 24px;
+}
+
+#user-profile {
+    height: 24px;
+    background-color: var(--rose-quartz);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#profile-name {
+    font-family: Helvetica, sans-serif;
+    color: var(--payne-gray);
+}
+
+/* ----- Greetings ----- */
+
+#greeting {
+    display: grid;
+    grid-template-columns: 50px 400px;;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    margin-left: 20px;
+    column-gap: 2em;
+}
+
+#greeting-profile-image {
+    height: 75px;
+    grid-area: 1 / 1 / 3 / 2;
+    border-radius: 50%;
+    background-color: var(--rose-quartz);
+}
+
+#greeting div {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
 article {
     background-color: var(--thistle);
     grid-area: 2 / 1 / 3 / 2;
@@ -151,7 +200,21 @@ article {
     grid-template-rows: 1fr 1fr;
 }
 
-article #main-content {
+.content-title {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.item-project {
+    background-color: var(--lavender-blush);
+    border-radius: 10px;
+}
+
+#main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+    margin: 20px;
+    gap: 30px;
     grid-area: 1 / 1 / 3 / 2;
 }
 
