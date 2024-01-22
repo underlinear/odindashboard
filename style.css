@@ -159,10 +159,10 @@ main {
 }
 
 #user-profile {
-    height: 24px;
+    height: 50px;
     background-color: var(--rose-quartz);
-    padding: 15px;
     border-radius: 50%;
+    padding: 2px;
 }
 
 #profile-name {
@@ -182,10 +182,11 @@ main {
 }
 
 #greeting-profile-image {
-    height: 75px;
+    height: 67px;
     grid-area: 1 / 1 / 3 / 2;
     border-radius: 50%;
     background-color: var(--rose-quartz);
+    padding: 4px;
 }
 
 #greeting div {
@@ -211,6 +212,9 @@ article {
 
 .content-title {
     grid-area: 1 / 1 / 2 / 3;
+    color: var(--raisin-black);
+    font-size: 18px;
+    font-family: Helvetica, sans-serf;
 }
 
 .item-project {
@@ -238,7 +242,7 @@ article {
 
 .item-buttons {
     display: grid;
-    align-items: center;
+    align-items: self-end;
     grid-template-columns: repeat(3, 40px);
     justify-content: end;
 }
@@ -248,20 +252,48 @@ article {
 }
 
 article #announcement {
-    border: 2px solid var(--payne-gray);
-    border-radius: 20px;
     grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    place-items: center;
 }
 
-#announcement-container {
+
+#announcement-container { 
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    row-gap: 20px;
+    margin: 40px 20px;
+    background-color: var(--lavender-blush);
+    border-radius: 10px;
+}
+
+.announcement-text {
+    padding: 20px;
+}
+
+.line-break {
+    border-top: var(--thistle) solid 2px;
+    border-bottom: var(--thistle) solid 2px;
 }
 
 article #trending {
     border: 2px solid var(--payne-gray);
     border-radius: 20px;
     grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    place-items: center;
+}
+
+#trending-items-container {
+    display: grid;
+    background-color: var(--lavender-blush);
+    grid-auto-rows: 1fr;
+    margin: 40px 20px;
+    border-radius: 10px;
+}
+
+.trending-item img{
+    border-radius: 50%;
 }
 
 
